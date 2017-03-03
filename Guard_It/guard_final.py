@@ -33,7 +33,7 @@ guard_list = [guard_left_1,guard_left_2,guard_left_3,guard_right_1,guard_right_2
 
 plant =  pygame.image.load("plant.png")
 
-ninja = pygame.image.load("ninja.png")#Can be used for key up, change to this.Must adjust code.
+ninja = pygame.image.load("ninja.png")
 
 ninja_left_1 = pygame.image.load("ninja_left_1.png")
 ninja_left_2 = pygame.image.load("ninja_left_2.png")
@@ -273,9 +273,6 @@ class Doors():
 
     def floors(self,screen):
         pygame.draw.rect(screen,grey,[self.x,self.y,500,10])
-        
-
-#Separate fuction for this message
 
 
 #Pass in boolean values to set the guards costumes.
