@@ -21,27 +21,26 @@ clock = pygame.time.Clock()
 
 done = False
 
-guard_left_1 = pygame.image.load("/home/pi/pygame_images/Guard_left_1.png")
-guard_left_2 = pygame.image.load("/home/pi/pygame_images/Guard_left_2.png")
-guard_left_3 = pygame.image.load("/home/pi/pygame_images/Guard_left_3.png")
-guard_right_1 = pygame.image.load("/home/pi/pygame_images/Guard_right_1.png")
-guard_right_2 = pygame.image.load("/home/pi/pygame_images/Guard_right_2.png")
-guard_right_3 = pygame.image.load("/home/pi/pygame_images/Guard_right_3.png")
+guard_left_1 = pygame.image.load("Guard_left_1.png")
+guard_left_2 = pygame.image.load("Guard_left_2.png")
+guard_left_3 = pygame.image.load("Guard_left_3.png")
+guard_right_1 = pygame.image.load("Guard_right_1.png")
+guard_right_2 = pygame.image.load("Guard_right_2.png")
+guard_right_3 = pygame.image.load("Guard_right_3.png")
 
-guard = guard_left_1#This is needed so that Pygame can assign a rectangle
-#to the sprite it draws first.
+guard = guard_left_1#This is needed so that Pygame can assign a rectangle to the sprite it draws first.
 guard_list = [guard_left_1,guard_left_2,guard_left_3,guard_right_1,guard_right_2,guard_right_3]
 
-plant =  pygame.image.load("/home/pi/pygame_images/plant.png")
+plant =  pygame.image.load("plant.png")
 
-ninja = pygame.image.load("/home/pi/pygame_images/ninja.png")#Can be used for key up, change to this.Must adjust code.
+ninja = pygame.image.load("ninja.png")#Can be used for key up, change to this.Must adjust code.
 
-ninja_left_1 = pygame.image.load("/home/pi/pygame_images/ninja_left_1.png")
-ninja_left_2 = pygame.image.load("/home/pi/pygame_images/ninja_left_2.png")
-ninja_left_3 = pygame.image.load("/home/pi/pygame_images/ninja_left_3.png")
-ninja_right_1 = pygame.image.load("/home/pi/pygame_images/ninja_right_1.png")
-ninja_right_2 = pygame.image.load("/home/pi/pygame_images/ninja_right_2.png")
-ninja_right_3 = pygame.image.load("/home/pi/pygame_images/ninja_right_3.png")
+ninja_left_1 = pygame.image.load("ninja_left_1.png")
+ninja_left_2 = pygame.image.load("ninja_left_2.png")
+ninja_left_3 = pygame.image.load("ninja_left_3.png")
+ninja_right_1 = pygame.image.load("ninja_right_1.png")
+ninja_right_2 = pygame.image.load("ninja_right_2.png")
+ninja_right_3 = pygame.image.load("ninja_right_3.png")
 
 character = ninja
 
@@ -152,8 +151,8 @@ class Guard():
         if self.x > 450 or self.x < 0:#Change these for guards start and finish x values.
             self.x_speed = self.x_speed * -1
 
-    def ready_to_fire_3(self):#####These should be made into one function, if I can get the 
-        if guard_3.x == 0:# Classes talking to each other.
+    def ready_to_fire_3(self):
+        if guard_3.x == 0:
             guard_3.mov_ri = True
         elif guard_3.x ==450:
             guard_3.mov_ri = False
@@ -431,7 +430,7 @@ while not done:
         screen.blit(text,[140,220])
         
     
-    #This needs to be here otherwise the above code will stop it from working.
+ 
     if game_over:
         screen.fill(black)
         text = font.render("Mission completed", True, white)
